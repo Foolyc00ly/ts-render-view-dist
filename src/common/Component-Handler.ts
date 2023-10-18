@@ -1,6 +1,6 @@
 import { MyGlobalScrollListener,AppRoot } from '../components';
 import { MyComponentMemoized } from '../components/My-Component-Memoized/My-Component-Memoized.class';
-
+import { html, render } from 'lit-html';
 interface Main{
    showIntroduction :()=>Promise<string>;
    renderAppContent:()=>Promise<void>;
@@ -36,11 +36,12 @@ export const Main:Main=(()=>{
          }
       },
       renderAppContent:async()=>{
-         const app:HTMLDivElement|null=document.querySelector('#app');
+         const app:HTMLDivElement|null=document.querySelector('.app');
          if(app!=null){
-            app.innerHTML=`
+            const template=html`
                <h1>Typescript BRAD♥○◘😎</h1>
             `;
+            render(template, app);
          }
       },
       Event:async()=>{

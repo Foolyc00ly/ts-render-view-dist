@@ -28,9 +28,6 @@ export class AppRoot extends HTMLElement{
       const ViewStrategy=viewFactory.getMethodStrategy(view);
       ViewStrategy.render();
    }
-   get renderView(){
-      return this._renderView
-   }
    private _clearShadow() {
       if(this.container){
          this.shadow.removeChild(this.container);
@@ -50,5 +47,8 @@ export class AppRoot extends HTMLElement{
       if(this.countElement){
          this.countElement.textContent = `Número de elementos: ${elementCount}`;
       }
+   }
+   get renderView(){
+      return this._renderView
    }
 }

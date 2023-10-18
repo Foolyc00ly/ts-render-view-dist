@@ -11,10 +11,13 @@ export class MyGlobalScrollListener extends HTMLElement{
    }
    handleScroll() {
       const scrollY = globalThis.scrollY;
-      if (scrollY>233) {
+      const navigationBarElement=document.querySelector('.barra-navegacion') as Element;
+      if (scrollY>150) {
          console.log(scrollY);
+         navigationBarElement.classList.add('fixed-top')
       } else {
          console.log(scrollY);
+         navigationBarElement.classList.remove('fixed-top')
       }
    }
 }

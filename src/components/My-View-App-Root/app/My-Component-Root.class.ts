@@ -25,7 +25,7 @@ export class ComponentRoot{
          <slot></slot>
          ${this.component.container}
          <style>${style}</style>
-         <span>${this.component.countElement}</span>
+         <div class="component">${this.component.countElement}</div>
       `;
       render(template,this.component.shadow)
    }

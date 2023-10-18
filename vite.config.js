@@ -1,19 +1,17 @@
 import { defineConfig } from 'vite';
-import { fileURLToPath, URL } from 'node:url'
 export default defineConfig({
    base: './',
    define: { 'process.env': {} },
    resolve: {
-      alias: {
-         '@': fileURLToPath(new URL('./src', import.meta.url))
+      build: {
+         target: 'modules',
+         outDir: '.vite-dist',
+         rollupOptions: {
+            input: {
+               stylesheet: './src/sass/style.ts',
+               main: './src/main.ts',
+            },
+         },
       },
-      extensions: [
-         '.js',
-         '.json',
-         '.jsx',
-         '.mjs',
-         '.ts',
-         '.tsx',
-      ],
    },
 });
