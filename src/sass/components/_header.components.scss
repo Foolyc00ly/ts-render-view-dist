@@ -1,0 +1,59 @@
+@include max-width("desktop-max"){
+   body{
+      .header{
+         background-color: $transparent-black;
+      }
+   }
+   h1{
+      color:$primary;
+   }
+   .main-menu{
+      background-color: bisque;
+      display:block;
+      & .nav__link{
+         display:block;
+         color: rgb(0,0,0,.6);
+         text-align: center;
+         font-size: 2rem;
+         padding: .5rem 2rem;
+      }
+      & .menu{
+         display: flex;
+      }
+   }
+}
+@include min-width("desktop-min"){
+   body{
+      .header{
+         background-color: $transparent-black;
+      }
+      .wrapper{
+         display:grid;
+         grid-template-columns: 1fr 1fr 1fr;
+      }
+   }
+   h1{
+      color:$primary;
+   }
+   .main-menu{
+      background-color: bisque;
+      display:block;
+      & .nav__link{
+         display:block;
+         color: rgb(0,0,0,.6);
+         text-align: center;
+         font-size: 2rem;
+         padding: .5rem 2rem;
+      }
+      & .menu{
+         display: flex;
+      }
+   }
+}
+
+
+.menu__item{
+   list-style-type:none;
+   cursor: pointer;
+   user-select: none;
+}

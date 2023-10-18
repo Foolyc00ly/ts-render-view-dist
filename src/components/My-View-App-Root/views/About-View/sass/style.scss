@@ -1,0 +1,11 @@
+@import '../../../../../sass/imports/settings.imports';
+.About{
+   background-color: blueviolet;
+   text-align: center;
+   .about-p{
+      color: $aqua;
+   }
+}
+.mi-clase{
+   background-color: bisque;
+}

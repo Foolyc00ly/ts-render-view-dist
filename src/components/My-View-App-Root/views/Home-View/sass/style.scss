@@ -1,0 +1,10 @@
+@import '../../../../../sass/imports/settings.imports';
+.Home{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   background-color: $transparent-black;
+   .home-p{
+      color: $aqua;
+   }
+}
