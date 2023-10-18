@@ -1,6 +1,5 @@
 import './sass/style.scss';
 import {ComponentHandler, Main as MainApp} from './common';
-
 class MainStrategy{
   private methodFunction:()=>void;
   constructor(methodFunction:()=>void){
