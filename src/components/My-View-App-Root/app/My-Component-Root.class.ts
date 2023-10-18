@@ -1,5 +1,6 @@
 import { html, render } from 'lit-html';
 import{AppRoot} from '../My-App-Root.class';
+import style from'./sass/style.scss?inline';
 interface MenuButton {
    element: Element;
    eventName: string;
@@ -23,7 +24,8 @@ export class ComponentRoot{
       const template=html`
          <slot></slot>
          ${this.component.container}
-         ${this.component.countElement}
+         <style>${style}</style>
+         <span>${this.component.countElement}</span>
       `;
       render(template,this.component.shadow)
    }
