@@ -15,15 +15,13 @@ export const ComponentHandler=(()=>{
          ComponentHandler.initializeComponents().then;
       },
       initializeComponents:async()=>{
-                                                          
          customElements.define('my-component-memoized', MyComponentMemoized);
-                                                          
          customElements.define('global-scroll-listener', MyGlobalScrollListener);
          customElements.define('app-root', AppRoot);
       }
    }
 })();
-                                        
+
 export const Main:Main=(()=>{
    return{
       showIntroduction :async()=>{
@@ -41,7 +39,7 @@ export const Main:Main=(()=>{
          const app:HTMLDivElement|null=document.querySelector('#app');
          if(app!=null){
             app.innerHTML=`
-               <h1>Typescript BRAD♥</h1>
+               <h1>Typescript BRAD♥○◘😎</h1>
             `;
          }
       },

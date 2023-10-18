@@ -14,6 +14,7 @@ export class ComponentRoot{
    public _setupUI(){
       this.component.container=document.createElement('div');
       this.component.countElement=document.createElement('p');
+      (this.component.observer as MutationObserver).observe(this.component.container as HTMLDivElement,{characterData:true,childList:true,subtree:true});
       this._renderAppShadow();
       this._getNavLinks();
    }

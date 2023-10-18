@@ -9,17 +9,16 @@ export class AppRoot extends HTMLElement{
    public container:HTMLDivElement|null=null;
    public countElement: HTMLElement|null=null;
    public componentRoot!:ComponentRoot|null;
-   private observer: MutationObserver|null=null;
+   public observer: MutationObserver|null=null;
    constructor() {
       super();
       this.shadow=this.attachShadow({mode:'closed'});
       this._renderView=this._renderView.bind(this);
    }
    connectedCallback() {
+      this.observer=new MutationObserver(this._handleShadowDOMChanges.bind(this));
       this.componentRoot=new ComponentRoot(this);
       this.componentRoot._setupUI();
-      this.observer=new MutationObserver(this._handleShadowDOMChanges.bind(this));
-      this.observer.observe(this.container as HTMLDivElement,{characterData:true,childList:true,subtree:true});
    }
    disconnectedCallback(){
       this._clearShadow();
