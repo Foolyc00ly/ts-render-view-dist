@@ -1,0 +1,16 @@
+.container-footer{
+   padding:4rem 0;
+}
+@include min-width("desktop-min"){
+   .container-footer{
+      display:flex;
+      justify-content: space-between;
+   }
+}
+
+.footer .main-menu a{
+   color:var(--negro);
+   text-align:center;
+   font-size:2.4rem;
+   padding:0 1rem;
+}

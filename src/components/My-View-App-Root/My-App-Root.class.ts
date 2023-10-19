@@ -15,7 +15,7 @@ export class AppRoot extends HTMLElement{
       this.shadow=this.attachShadow({mode:'closed'});
       this._renderView=this._renderView.bind(this);
    }
-   connectedCallback() {
+   connectedCallback(){
       this.observer=new MutationObserver(this._handleShadowDOMChanges.bind(this));
       this.componentRoot=new ComponentRoot(this);
       this.componentRoot._setupUI();
