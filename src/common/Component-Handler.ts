@@ -2,7 +2,7 @@ import { MyGlobalScrollListener,AppRoot } from '../components';
 import { MyComponentMemoized } from '../components/My-Component-Memoized/My-Component-Memoized.class';
 import { html, render } from 'lit-html';
 interface Main{
-   showIntroduction :()=>Promise<string>;
+   showIntroduction:()=>Promise<string>;
    renderAppContent:()=>Promise<void>;
    Event:()=>Promise<void>;
 }
