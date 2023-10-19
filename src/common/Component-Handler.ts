@@ -1,5 +1,4 @@
-import { MyGlobalScrollListener,AppRoot } from '../components';
-import { MyComponentMemoized } from '../components/My-Component-Memoized/My-Component-Memoized.class';
+import { MyGlobalScrollListener,AppRoot,NavigationComponent,MyComponentMemoized } from '../components';
 import { html, render } from 'lit-html';
 interface Main{
    showIntroduction:()=>Promise<string>;
@@ -18,6 +17,7 @@ export const ComponentHandler=(()=>{
          customElements.define('my-component-memoized', MyComponentMemoized);
          customElements.define('global-scroll-listener', MyGlobalScrollListener);
          customElements.define('app-root', AppRoot);
+         customElements.define('navigation-component', NavigationComponent);
       }
    }
 })();

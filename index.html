@@ -11,14 +11,15 @@
       <header class="header">
         <div class="app contenedor barra-navegacion"></div>
         <app-root>
-          <nav class="main-menu">
-            <ul class="menu">
-              <li class="menu__item"><a class="nav__link">Home</a></li>
-              <li class="menu__item"><a class="nav__link">Contact</a></li>
-              <li class="menu__item"><a class="nav__link">About</a></li>
-
-            </ul>
-          </nav>
+          <navigation-component>
+            <nav class="main-menu">
+              <ul class="menu">
+                <li class="menu__item"><a class="nav__link">Home</a></li>
+                <li class="menu__item"><a class="nav__link">Contact</a></li>
+                <li class="menu__item"><a class="nav__link">About</a></li>
+              </ul>
+            </nav>
+          </navigation-component>
         </app-root>
       </header>
       <my-component-memoized>
@@ -71,6 +72,17 @@
         <li>a</li>
         <li>a</li>
       </ul>
+      <footer>
+        <navigation-component>
+          <nav class="main-menu">
+            <ul class="menu">
+              <li class="menu__item"><a class="nav__link">Home</a></li>
+              <li class="menu__item"><a class="nav__link">Contact</a></li>
+              <li class="menu__item"><a class="nav__link">About</a></li>
+            </ul>
+          </nav>
+        </navigation-component>
+      </footer>
       <script type="module" src="./src/main.ts"></script>
     <global-scroll-listener/>
   </body>
