@@ -52,6 +52,6 @@ var Z=Object.defineProperty;var J=(i,e,t)=>e in i?Z(i,e,{enumerable:!0,configura
                ======================
                USANDO TS EN PROYECTOS
                ======================
-            `}catch(i){throw i}},renderAppContent:async()=>{const i=document.querySelector(".app");if(i!=null){const e=v`
+            `}catch(i){throw i}},renderAppContent:async()=>{const i=document.querySelector("#app");if(i!=null){const e=v`
                <h1>Typescript BRAD♥○◘😎</h1>
             `;A(e,i)}},Event:async()=>{Object.entries(O).filter(([],i,e)=>i<e.length-1||i==0).forEach(([i])=>{O[i]().then()})}}))();class D{constructor(e){l(this,"methodFunction");this.methodFunction=e}execute(){this.methodFunction()}}class we{constructor(){l(this,"methods",{});this._initializeMain()}_initializeMain(){this.methods.method1=new D(()=>K.logAction(O)),this.methods.method2=new D(()=>{})}getMethodStrategy(e){return this.methods[e]!==void 0?this.methods[e]:this.methods.method1}}class ye{constructor(){this.setup=this.setup.bind(this),this.init()}init(){document.addEventListener("DOMContentLoaded",this.setup)}async setup(){const e=this.methodFromElement;new we().getMethodStrategy(e).execute()}get methodFromElement(){return document.body.getAttribute("data-method")}}new ye;
