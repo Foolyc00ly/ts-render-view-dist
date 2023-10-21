@@ -12,7 +12,7 @@ var ke=Object.defineProperty;var Oe=(n,e,t)=>e in n?ke(n,e,{enumerable:!0,config
          ${this.component.container}
          <div class="component">${this.component.countElement}</div>
          <style>${Lt}</style>
-      `;_(e,this.component.shadow)}_getNavLinks(){this.component.querySelectorAll(".menu__item").forEach(e=>{var r;const t=(((r=e.textContent)==null?void 0:r.trim())||"").toLowerCase();Z(globalThis,t).pipe(oe(i=>i.target)).subscribe(()=>{globalThis.history.pushState(null,"",`/${t}`),this.component.renderView(t)})}),window.onpopstate=e=>{if(e.state&&e.state.view){const t=e.state.view;this.component.renderView(t)}}}}const Ot=`.Home{display:flex;flex-direction:column;text-align:center;background-color:#000000e6}.Home .home-p{color:#0ff}
+      `;_(e,this.component.shadow)}_getNavLinks(){this.component.querySelectorAll(".menu__item").forEach(e=>{var r;const t=(((r=e.textContent)==null?void 0:r.trim())||"").toLowerCase();Z(globalThis,t).pipe(oe(i=>i.target)).subscribe(()=>{globalThis.history.pushState(null,"",`${globalThis.location.origin}/${t}`),console.log(globalThis.location.origin),this.component.renderView(t)})}),window.onpopstate=e=>{if(e.state&&e.state.view){const t=e.state.view;this.component.renderView(t)}}}}const Ot=`.Home{display:flex;flex-direction:column;text-align:center;background-color:#000000e6}.Home .home-p{color:#0ff}
 `;class Vt{constructor(e){this.container=e}render(){const e=w`
          <style>${Ot}</style>
          <section class="Home" id="home1">
